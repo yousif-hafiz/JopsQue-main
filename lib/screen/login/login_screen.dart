@@ -5,8 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:graduated_project/home/widget/BootomNavigatorItem/screen/bottom_navigation_bar_item.dart';
-
 import 'package:graduated_project/widgets/custom_elvated_button.dart';
 import 'package:graduated_project/widgets/logo_app.dart';
 import 'package:graduated_project/widgets/logos.dart';
@@ -14,6 +12,7 @@ import 'package:graduated_project/widgets/text_field/custom_textfield.dart';
 import '../../provider/provider.dart';
 import '../create_accoun/screen/create_account_screen/create_account_screen.dart';
 import '../forgot_password/forgot_password_one/forgot_password_one.dart';
+import '../home/widget/BootomNavigatorItem/screen/bottom_navigation_bar_item.dart';
 import 'controller/login_controller.dart';
 
 class LoginScreen extends StatefulWidget {

@@ -6,7 +6,6 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
-import 'package:graduated_project/apply_jop/apply_jop_screen.dart';
 import 'package:graduated_project/model/jops.dart';
 import 'package:graduated_project/provider/provider.dart';
 import 'package:graduated_project/widgets/saved_icon.dart';

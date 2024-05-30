@@ -5,20 +5,19 @@ import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
-import 'package:graduated_project/home/screen/search_screen.dart';
 import 'package:graduated_project/model/company.dart';
 import 'package:graduated_project/model/user.dart';
-import 'package:graduated_project/saved_jops/widget/saved_jops_tem.dart';
 import 'package:graduated_project/widgets/custom_search.dart';
 import 'package:image_picker/image_picker.dart';
 // import 'package:graduated_project/saved_jops/widget/saved_jops_item.dart';
 
 import '../database/local_database.dart';
-import '../home/widget/recent_searches.dart';
 import '../model/jops.dart';
-import '../profile/screen/portfolio/portfolio_screen.dart';
 import '../screen/applyid_jop/applied_jop_item/screen/AppliedJopItemScreen.dart';
+import '../screen/home/widget/recent_searches.dart';
 import '../screen/message/widget/message_items.dart';
+import '../screen/profile/screen/portfolio/portfolio_screen.dart';
+import '../screen/saved_jops/widget/saved_jops_tem.dart';
 import '../widgets/jops_item.dart';
 
 final providerr = ChangeNotifierProvider<JopProvider>((ref) => JopProvider());
@@ -86,7 +85,7 @@ class JopProvider extends ChangeNotifier {
         ));
       }
     }
-    //notifyListeners();
+    notifyListeners();
   }
 
   Future setSaveJops(int jopID) async {
@@ -131,7 +130,7 @@ class JopProvider extends ChangeNotifier {
       }
 
       // user = datauser;
-      //notifyListeners();
+      notifyListeners();
     }
     getSearch();
 
@@ -163,7 +162,7 @@ class JopProvider extends ChangeNotifier {
     // getMessage();
     getJops();
     getSearch();
-    //notifyListeners();
+    notifyListeners();
   }
 
   Future<void> editUser() async {
@@ -190,7 +189,7 @@ class JopProvider extends ChangeNotifier {
       }, validateStatus: (_) => true),
     );
 
-    //notifyListeners();
+    notifyListeners();
   }
 
   Future<void> changePassword() async {
@@ -206,7 +205,7 @@ class JopProvider extends ChangeNotifier {
       }, validateStatus: (_) => true),
     );
 
-    //notifyListeners();
+    notifyListeners();
   }
 
   void logOut() {
@@ -225,7 +224,7 @@ class JopProvider extends ChangeNotifier {
     isSwitchingVerify = false;
     isTwoStepVerify = false;
     LocalDataBase.deleteUser();
-    //notifyListeners();
+    notifyListeners();
   }
 
 /////////////////////////////////////////////message
@@ -270,7 +269,7 @@ class JopProvider extends ChangeNotifier {
     // user = User.fromJson(response.data['data']['profile']);
     // print("/////////////////////////////////");
     // print("the ID: ${user?.bio == null}");
-    // notifyListeners();
+    notifyListeners();
   }
 
 /////////////////////////////////////////////searchJops
@@ -300,7 +299,7 @@ class JopProvider extends ChangeNotifier {
         ));
       }
     }
-    //notifyListeners();
+    notifyListeners();
   }
 
 /////////////////////////////////////////////filterJop
@@ -331,7 +330,7 @@ class JopProvider extends ChangeNotifier {
         ));
       }
     }
-    //notifyListeners();
+    notifyListeners();
   }
 
 /////////////////////////////////////////////about CV
@@ -346,7 +345,7 @@ class JopProvider extends ChangeNotifier {
 
   void removeCVData() async {
     pdfData = null;
-    //notifyListeners();
+    notifyListeners();
   }
 
 /////////////////////////////////////////////about Jops
@@ -364,7 +363,7 @@ class JopProvider extends ChangeNotifier {
     activeJop[activeJop.indexWhere((element) => element.jop.id == jops.id)] =
         AppliedJopItem(jop: jops);
     // int index = allJops.indexWhere((element) => element.jop.id == jops.id);
-    //notifyListeners();
+    notifyListeners();
   }
 
   void unsaveJop(Jops jops) async {
@@ -381,7 +380,7 @@ class JopProvider extends ChangeNotifier {
     activeJop[activeJop.indexWhere((element) => element.jop.id == jops.id)] =
         AppliedJopItem(jop: jops);
 
-    //notifyListeners();
+    notifyListeners();
   }
 
 /////////////////////////////////////////////about Portfolio
@@ -408,24 +407,24 @@ class JopProvider extends ChangeNotifier {
       }
     }
 
-    //notifyListeners();
+    notifyListeners();
   }
 
   void removePortfolio(String name) async {
     portfolioList.removeWhere((element) => element.dataOfPdf?.name == name);
 
-    //notifyListeners();
+    notifyListeners();
   }
 
 //////////////////////////////actev TWo Step verify
   void verifyde() async {
     isTwoStepVerify = !isTwoStepVerify;
-    //notifyListeners();
+    notifyListeners();
   }
 
   void switchVerify() async {
     isSwitchingVerify = !isSwitchingVerify;
-    //notifyListeners();
+    notifyListeners();
   }
 
   ////////////////////////////Search
@@ -440,7 +439,7 @@ class JopProvider extends ChangeNotifier {
       recentSearches.add(RecentSearches(searchName: element));
     }
 
-    //notifyListeners();
+    notifyListeners();
   }
 
   void setSearch(String searchName) async {
@@ -452,7 +451,7 @@ class JopProvider extends ChangeNotifier {
       recentSearches.removeWhere((element) => element.searchName == searchName);
       recentSearches.insert(0, RecentSearches(searchName: searchName));
 
-      //notifyListeners();
+      notifyListeners();
     }
   }
 
@@ -462,7 +461,7 @@ class JopProvider extends ChangeNotifier {
     recentSearches.removeWhere((element) => element.searchName == searchName);
 
     // recentSearches.add(RecentSearches(searchName: searchName));
-    //notifyListeners();
+    notifyListeners();
   }
 
   Future<Void?> sentDataToapplyJop(name, email, mobile, workType, jopId) async {

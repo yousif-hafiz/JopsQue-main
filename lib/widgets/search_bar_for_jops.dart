@@ -3,8 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:graduated_project/database/local_database.dart';
-import 'package:graduated_project/home/screen/resault_search_screen.dart';
 import 'package:graduated_project/provider/provider.dart';
+
+import '../screen/home/screen/resault_search_screen.dart';
 
 class SearchBarForJops extends StatefulWidget {
   const SearchBarForJops({

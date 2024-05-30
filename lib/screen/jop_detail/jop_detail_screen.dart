@@ -2,12 +2,12 @@ import 'dart:ffi';
 
 import 'package:custom_sliding_segmented_control/custom_sliding_segmented_control.dart';
 import 'package:flutter/material.dart';
-import 'package:graduated_project/apply_jop/apply_jop_screen.dart';
 import 'package:graduated_project/model/jops.dart';
 import 'package:graduated_project/widgets/custom_chip.dart';
 import 'package:graduated_project/widgets/saved_icon.dart';
 
 import '../../widgets/custom_elvated_button.dart';
+import '../apply_jop/apply_jop_screen.dart';
 import 'controller/jop_detail_controller.dart';
 import 'job_detail_company/job_detail_company_screen.dart';
 import 'job_detail_people/people_screen.dart';

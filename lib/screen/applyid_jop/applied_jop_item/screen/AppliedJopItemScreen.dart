@@ -5,11 +5,11 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_state_manager/src/simple/get_state.dart';
 
-import '../../../../apply_jop/apply_jop_screen.dart';
 import '../../../../model/jops.dart';
 import '../../../../widgets/custom_chip.dart';
 import '../../../../widgets/saved_icon.dart';
 
+import '../../../apply_jop/apply_jop_screen.dart';
 import '../controller/AppliedJopItemController.dart';
 
 class AppliedJopItem extends StatelessWidget {
