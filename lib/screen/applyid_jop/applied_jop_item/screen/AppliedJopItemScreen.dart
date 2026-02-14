@@ -12,7 +12,7 @@ import '../../../../widgets/saved_icon.dart';
 import '../../../apply_jop/apply_jop_screen.dart';
 import '../controller/AppliedJopItemController.dart';
 
-class AppliedJopItem extends StatelessWidget {
+class AppliedJopItem extends StatelegissWidget {
   AppliedJopItem({
     super.key,
     required this.jop,

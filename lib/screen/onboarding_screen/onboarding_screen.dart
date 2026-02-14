@@ -112,6 +112,7 @@ class OnboardingScreen extends StatelessWidget {
                           'Skip',
                           style: TextStyle(
                             color: Colors.black,
+                            //fontWeight: FontWeight.bold
                           ),
                         )),
                   ],
